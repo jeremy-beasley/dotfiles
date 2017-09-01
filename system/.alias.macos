@@ -1,0 +1,28 @@
+# Copy pwd to clipboard
+alias cpwd="pwd|tr -d '\n'|pbcopy"
+
+# Shortcuts
+
+# Exclude macOS specific files in ZIP archives
+alias zip="zip -x *.DS_Store -x *__MACOSX* -x *.AppleDouble*"
+
+# Open iOS Simulator
+alias ios="open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app"
+
+# Start screen saver
+alias afk="/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine"
+
+# Log off
+alias logoff="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Quick-Look preview files from the command line
+alias ql="qlmanage -p &>/dev/null"
+
+# Clean up LaunchServices to remove duplicates in the "Open With" menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
+# Reload native apps
+alias killfinder="killall Finder"
+alias killdock="killall Dock"
+alias killmenubar="killall SystemUIServer NotificationCenter"
+alias killos="killfinder && killdock && killmenubar"
