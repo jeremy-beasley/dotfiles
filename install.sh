@@ -20,8 +20,10 @@ ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
-ln -sfv "$DOTFILES_DIR/vim/.vim" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
+
+# Install Vundle and initialize plugins
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall
 
 # Package managers & packages
 . "$DOTFILES_DIR/install/brew.sh"
