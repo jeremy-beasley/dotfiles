@@ -1,7 +1,5 @@
 #!/usr/bin/env bats
-
 load "${DOTFILES_DIR}/system/.function"
-load "${DOTFILES_DIR}/system/.function_text"
 
 FIXTURE=$'foo\nbar\nbaz\nfoo'
 FIXTURE_TEXT="foo"
