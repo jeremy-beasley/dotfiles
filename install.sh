@@ -23,7 +23,12 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 
 # Install Vundle and initialize plugins
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && vim +PluginInstall +qall
+# clone if doesn't exist
+if [ ! -d "~/.vim" ]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+fi
+# install plugins
+vim +PluginInstall +qall
 
 # Package managers & packages
 . "$DOTFILES_DIR/install/brew.sh"
