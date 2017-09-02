@@ -8,7 +8,8 @@ DOTFILES_EXTRA_DIR="$HOME/.extra"
 
 # Common functions
 . "$DOTFILES_DIR/system/.function"
-. "$DOTFILES_DIR/system/.function_network"
+. "$DOTFILES_DIR/system/.function.macos"
+. "$DOTFILES_DIR/system/.function_fs"
 
 # Update dotfiles itself first
 if is-executable git -a -d "$DOTFILES_DIR/.git"; then git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master; fi
