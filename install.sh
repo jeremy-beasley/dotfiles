@@ -15,9 +15,9 @@ DOTFILES_EXTRA_DIR="$HOME/.extra"
 if is-executable git -a -d "$DOTFILES_DIR/.git"; then git --work-tree="$DOTFILES_DIR" --git-dir="$DOTFILES_DIR/.git" pull origin master; fi
 
 # Bunch of symlinks
-ln -sfv "$DOTFILES_DIR/runcom/.bash_profile" ~
-ln -sfv "$DOTFILES_DIR/runcom/.inputrc" ~
-ln -sfv "$DOTFILES_DIR/runcom/.gemrc" ~
+ln -sfv "$DOTFILES_DIR/system/.bash_profile" ~
+ln -sfv "$DOTFILES_DIR/system/.inputrc" ~
+ln -sfv "$DOTFILES_DIR/system/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
