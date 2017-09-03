@@ -32,6 +32,7 @@ apps=(
   lynx
   mackup
   nano
+  node
   pandoc
   peco
   psgrep
