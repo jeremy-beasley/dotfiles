@@ -1,5 +1,4 @@
 # Switch long/short prompt
-
 ps0() {
   unset PROMPT_COMMAND
   PS1='$ '
@@ -10,13 +9,11 @@ ps1() {
 }
 
 # Get named var (usage: get "VAR_NAME")
-
 get() {
   echo "${!1}"
 }
 
 # Feature detection
-
 is-macos() { [[ "$OSTYPE" =~ ^darwin ]] || return 1; }
 
 is-executable() {
@@ -36,13 +33,11 @@ is-supported() {
 }
 
 # Add to path
-
 prepend-path() {
   [ -d $1 ] && PATH="$1:$PATH"
 }
 
 # Update config file
-
 set-config() {
   local KEY="$1"
   local VALUE="$2"
@@ -56,7 +51,6 @@ set-config() {
 }
 
 # Show 256 TERM colors
-
 colors() {
   local X=$(tput op)
   local Y=$(printf %$((COLUMNS-6))s)
@@ -67,13 +61,11 @@ colors() {
 }
 
 # Calculator
-
 calc() {
   echo "$*" | bc -l;
 }
 
 # Weather
-
 meteo() {
   local LOCALE=`echo ${LANG:-en} | cut -c1-2`
   if [ $# -eq 0 ]; then
@@ -85,7 +77,6 @@ meteo() {
 }
 
 # Markdown
-
 md() {
   pandoc $1 | lynx -stdin -dump
 }

@@ -5,14 +5,12 @@ manpdf() {
 }
 
 # Dev
-
 d() {
   $DOTFILES_IDE ${1:-.}
   $DOTFILES_GIT_GUI ${1:-.}
 }
 
 # Open query in Dash app
-
 dash() {
   case $# in
     1) QUERY="$1";;
