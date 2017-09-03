@@ -28,9 +28,6 @@ alias g="git"
 alias rr="rm -rf"
 alias week="date +%V"
 
-#### SHORTCUTS
-
-
 #####################################################
 ### DEFAULT ARGUMENTS
 #####################################################
@@ -83,6 +80,7 @@ alias nup="npm update"
 #brew 
 alias bi="brew install"
 alias bup="brew update"
+alias bug="brew upgrade"
 
 # Misc
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
