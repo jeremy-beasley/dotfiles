@@ -3,7 +3,6 @@
 """""""""""""""""""""""""""""""""""""
 set encoding=utf8
 
-
 """" START Vundle Configuration 
 
 " Disable file type for vundle
@@ -14,37 +13,26 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Eliminate delays on ESC in vim
+set ttimeoutlen=10
+
+" Disable default mode indicator and relate on airline
+set noshowmode
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-
 " Utility
 Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'ervandew/supertab'
-Plugin 'BufOnly.vim'
-Plugin 'wesQ3/vim-windowswap'
-Plugin 'SirVer/ultisnips'
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/fzf'
-Plugin 'godlygeek/tabular'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'benmills/vimux'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'gilsondev/searchtasks.vim'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'tpope/vim-dispatch'
-Plugin 'terryma/vim-multiple-cursors'
 
 " Generic Programming Support 
 Plugin 'jakedouglas/exuberant-ctags'
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'tobyS/vmustache'
-Plugin 'janko-m/vim-test'
-Plugin 'maksimr/vim-jsbeautify'
+" Plugin 'tobyS/vmustache'
+" Plugin 'janko-m/vim-test'
+" Plugin 'maksimr/vim-jsbeautify'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neomake/neomake'
 
@@ -55,56 +43,19 @@ Plugin 'jtratner/vim-flavored-markdown'
 Plugin 'LanguageTool'
 
 " Git Support
-Plugin 'kablamo/vim-git-log'
-Plugin 'gregsexton/gitv'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jaxbot/github-issues.vim'
+" Plugin 'kablamo/vim-git-log'
+" Plugin 'gregsexton/gitv'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'jaxbot/github-issues.vim'
 
-" PHP Support - Can disable these. Don't use PHP at the moment. 20170831
-" Plugin 'phpvim/phpcd.vim'
-" Plugin 'tobyS/pdv'
-
-" Erlang Support
-" Plugin 'vim-erlang/vim-erlang-tags'
-" Plugin 'vim-erlang/vim-erlang-runtime'
-" " " " " " " " Plugin 'vim-erlang/vim-erlang-omnicomplete'
-" Plugin 'vim-erlang/vim-erlang-compiler'
-
-" Elixir Support 
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'avdgaag/vim-phoenix'
-Plugin 'mmorearty/elixir-ctags'
-Plugin 'mattreduce/vim-mix'
-Plugin 'BjRo/vim-extest'
-Plugin 'frost/vim-eh-docs'
-Plugin 'slashmili/alchemist.vim'
-Plugin 'tpope/vim-endwise'
-Plugin 'jadercorrea/elixir_generator.vim'
-
-" Elm Support
-Plugin 'lambdatoast/elm.vim'
 
 " Theme / Interface
 Plugin 'AnsiEsc.vim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'sjl/badwolf'
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
-Plugin 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plugin 'junegunn/limelight.vim'
-Plugin 'mkarmona/colorsbox'
-Plugin 'romainl/Apprentice'
-Plugin 'Lokaltog/vim-distinguished'
 Plugin 'chriskempson/base16-vim'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'AlessandroYorba/Sierra'
-Plugin 'daylerees/colour-schemes'
-Plugin 'effkay/argonaut.vim'
 Plugin 'ajh17/Spacegray.vim'
-Plugin 'atelierbram/Base2Tone-vim'
-Plugin 'colepeters/spacemacs-theme.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -119,8 +70,8 @@ set nowrap
 " OSX stupid backspace fix
 set backspace=indent,eol,start
 
-" Show linenumbers
-set number
+" Show linenumbers to show relative numbers
+set number relativenumber
 
 " Set Proper Tabs
 set tabstop=4
@@ -141,10 +92,6 @@ set cursorline
 syntax on
 set t_Co=256
 
-" if (has("termguicolors"))
-"   set termguicolors
-" endif
-
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme spacegray
 
@@ -153,11 +100,11 @@ let g:spacegray_italicize_comments = 1
 
 " Vim-Airline Configuration
 let g:airline#extensions#tabline#enabled = 1
+
 " let g:airline_powerline_fonts = 1 
 let g:airline_theme='hybrid'
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 
-let g:ttimeoutlen = 10
 
 " Syntastic Configuration
 set statusline+=%#warningmsg#
@@ -168,25 +115,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 " let g:syntastic_check_on_wq = 0
-" let g:syntastic_enable_elixir_checker = 1
-" let g:syntastic_elixir_checkers = ["elixir"]
 
-" Neomake settings
-autocmd! BufWritePost * Neomake
-let g:neomake_elixir_enabled_makers = ['mix', 'credo', 'dogma']
-
-" Vim-PDV Configuration 
-let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 
 " Markdown Syntax Support
 augroup markdown
     au!
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
-
-" Vim-Alchemist Configuration
-let g:alchemist#elixir_erlang_src = "/Users/amacgregor/Projects/Github/alchemist-source"
-let g:alchemist_tag_disable = 1
 
 " Vim-Supertab Configuration
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
