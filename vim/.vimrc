@@ -33,6 +33,9 @@ set shiftwidth=4
 " Enable clipboard
 set clipboard=unnamed
 
+" Disable default status line and let lightline take care of the work
+set noshowmode
+
 " Disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
