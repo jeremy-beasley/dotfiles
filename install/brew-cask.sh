@@ -21,6 +21,10 @@ apps=(
 
 brew cask install "${apps[@]}"
 
+# Install files for devicons/nerdtree integration 
+brew tap caskroom/fonts
+brew cask install font-inconsolata-nerd-font
+
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 

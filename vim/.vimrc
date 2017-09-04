@@ -52,6 +52,13 @@ Plugin 'itchyny/lightline.vim'
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" Commenting
+Plugin 'tomtom/tcomment_vim'
+
+" enable Nerdtree and devicons
+Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-webdevicons'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -60,3 +67,10 @@ filetype plugin indent on    " required
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
+
+" Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
+" devicons
+map <C-n> :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden=1
+set encoding=utf8
+set guifont=InconsolataForPowerline\ Nerd\ Font\ Medium:h13
