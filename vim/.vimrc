@@ -53,11 +53,20 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'VundleVim/Vundle.vim'
 
 " Commenting
-Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-commentary'
+
+" Shortcuts for adding/changing surrounding delimiters
+Plugin 'tpope/vim-surround'
 
 " enable Nerdtree and devicons
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-webdevicons'
+
+" enable auto pairs
+Plugin 'jiangmiao/auto-pairs'
+
+" enable syntax checking
+Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,3 +83,12 @@ map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden=1
 set encoding=utf8
 set guifont=InconsolataForPowerline\ Nerd\ Font\ Medium:h13
+
+" Configure Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
