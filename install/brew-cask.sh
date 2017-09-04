@@ -4,6 +4,7 @@ if ! is-macos -o ! is-executable brew; then
 fi
 
 brew tap caskroom/cask
+brew cask install java
 
 # Install packages
 
