@@ -87,6 +87,7 @@ alias ga="git add"
 alias gs="git status"
 alias gc="git commit"
 
+
 # Misc
 alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
 

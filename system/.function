@@ -80,3 +80,22 @@ meteo() {
 md() {
   pandoc $1 | lynx -stdin -dump
 }
+
+# open repo on Github or Bitbucket
+repo() {
+	if [ ! -d .git ] ; 
+        then echo "ERROR: This isnt a git directory" && return false; 
+    fi
+    git_url=`git config --get remote.origin.url`
+
+    if [[ $git_url == https://*github* ]]; then
+    	url=${git_url%.git}
+    elif [[ $git_url == https://*bitbucket* ]]; then
+		# remove "x-token-auth@" from middle of string and ".git" from end 
+		url=${git_url/x-token-auth@}
+		url=${url%.git}
+	else
+        echo "ERROR: Remote origin is invalid" && return false;
+    fi
+    open $url	
+}
