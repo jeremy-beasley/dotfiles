@@ -287,7 +287,7 @@ defaults write com.apple.Safari ShowFavoritesBar -bool true
 defaults write com.apple.Safari DebugSnapshotsUpdatePolicy -int 2
 
 # Hide Safari’s sidebar in Top Sites
-defaults write com.apple.Safari ShowSidebarInTopSites -bool true
+defaults write com.apple.Safari ShowSidebarInTopSites -bool false
 
 # Remove useless icons from Safari’s bookmarks bar
 defaults write com.apple.Safari ProxiesInBookmarksBar "()"
