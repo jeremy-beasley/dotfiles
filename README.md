@@ -1,8 +1,11 @@
 These are my dotfiles. Take anything you want, but at your own risk. It targets macOS systems. 
 
+(Shout out to Lars Kappert for his excellent [intro to dotfiles](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789). Borrowed heavily from his thinking and [his code](https://github.com/webpro/dotfiles).)
+
 # .files
 I've organized the dotfiles into the following major categories:
 
+````
 .
 ├── bin
 │ └── dotfiles 
@@ -39,6 +42,7 @@ I've organized the dotfiles into the following major categories:
 │ └── function.bats
 └── vim
  └── .vimrc
+````
 
 - - - -
 
