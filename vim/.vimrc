@@ -36,6 +36,23 @@ set clipboard=unnamed
 " Disable default status line and let lightline take care of the work
 set noshowmode
 
+" watch for file changes and auto update
+set autoread         
+
+" Don't redraw vim in all situations
+set lazyredraw        
+
+" Change the terminal's title
+set title            
+
+" Fold settings
+set nofoldenable               " Have all folds open by default
+set foldnestmax=10             " Set deepest fold to x levels
+set foldmethod=indent          " Decide where to fold based off syntax
+set foldcolumn=2               " The width of the gutter column showing folds by line
+" Toggle folds with the space bar
+nnoremap <Space> za
+
 " Disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
