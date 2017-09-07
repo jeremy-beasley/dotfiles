@@ -39,6 +39,7 @@ apps=(
   python
   shellcheck
   ssh-copy-id
+  tmux
   tree
   wget
   wifi-password
