@@ -37,6 +37,7 @@ apps=(
   peco
   psgrep
   python
+  reattach-to-user-namespace
   shellcheck
   ssh-copy-id
   tmux
