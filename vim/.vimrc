@@ -42,6 +42,13 @@ set autoread
 " Don't redraw vim in all situations
 set lazyredraw        
 
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
 " Change the terminal's title
 set title            
 
@@ -50,6 +57,7 @@ set nofoldenable               " Have all folds open by default
 set foldnestmax=10             " Set deepest fold to x levels
 set foldmethod=indent          " Decide where to fold based off syntax
 set foldcolumn=2               " The width of the gutter column showing folds by line
+
 " Toggle folds with the space bar
 nnoremap <Space> za
 
@@ -90,6 +98,9 @@ Plugin 'vim-syntastic/syntastic'
 
 " enable keyboard shortcut navigation from tmux and vim 
 Plugin 'christoomey/vim-tmux-navigator'
+
+" enable runner to communicate between vim and tmux
+Plugin 'christoomey/vim-tmux-runner'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
