@@ -88,9 +88,16 @@ Plugin 'jiangmiao/auto-pairs'
 " enable syntax checking
 Plugin 'vim-syntastic/syntastic'
 
+" enable keyboard shortcut navigation from tmux and vim 
+Plugin 'christoomey/vim-tmux-navigator'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+""""""""
+" PLUGIN CONFIGURATIONS 
+" """"""""""
 
 " Configure lightline colorscheme
 let g:lightline = {

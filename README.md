@@ -7,41 +7,44 @@ I've organized the dotfiles into the following major categories:
 
 ````
 .
+├── README.md
 ├── bin
-│ └── dotfiles 
-├── git
-│ ├── .gitconfig
-│ └── .gitignore_global
+│   ├── dotfiles
+│   └── tat
 ├── install
-│ ├── bash.sh
-│ ├── brew-cask.sh
-│ ├── brew.sh
-│ ├── gem.sh
-│ └── npm.sh
-├── *install.sh*
+│   ├── .DS_Store
+│   ├── bash.sh
+│   ├── brew-cask.sh
+│   ├── brew.sh
+│   ├── gem.sh
+│   └── npm.sh
+├── install.sh
 ├── macos
-│ ├── defaults.sh
-│ └── dock.sh
+│   ├── defaults.sh
+│   └── dock.sh
+├── remote-install.sh
 ├── system
-│ ├── .alias
-│ ├── .alias.macos
-│ ├── .bash_profile
-│ ├── .completion
-│ ├── .env
-│ ├── .function
-│ ├── .function.macos
-│ ├── .function_fs
-│ ├── .gemrc
-│ ├── .inputrc
-│ ├── .nvm
-│ ├── .path
-│ ├── .prompt
-│ └── .rvm
+│   ├── .alias
+│   ├── .alias.macos
+│   ├── .bash_profile
+│   ├── .completion
+│   ├── .env
+│   ├── .function
+│   ├── .function.macos
+│   ├── .function_fs
+│   ├── .gemrc
+│   ├── .inputrc
+│   ├── .nvm
+│   ├── .path
+│   ├── .prompt
+│   ├── .rvm
+│   ├── .tmux.conf
 ├── test
-│ ├── bin.bats
-│ └── function.bats
+│   ├── bin.bats
+│   └── function.bats
 └── vim
- └── .vimrc
+    ├── .tmux.conf
+    ├── .vimrc
 ````
 
 - - - -
