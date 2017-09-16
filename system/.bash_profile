@@ -41,6 +41,18 @@ if is-macos; then
   done
 fi
 
+# Detect whether in tmux; if not, then start new tmux session
+_not_inside_tmux() { 
+	[[ -z "$TMUX" ]] 
+}
+
+ensure_tmux_is_running() {
+  if _not_inside_tmux; then
+    tat
+  fi
+}
+ensure_tmux_is_running
+
 # Set LSCOLORS
 # eval "$(dircolors "$DOTFILES_DIR"/system/.dir_colors)"
 
@@ -61,6 +73,5 @@ export DOTFILES_DIR DOTFILES_EXTRA_DIR
 
 # Archey
 archey -c
-
 
 # Detect whether in tmux; if not, then start new tmux session
