@@ -51,6 +51,7 @@ ensure_tmux_is_running() {
     tat
   fi
 }
+
 ensure_tmux_is_running
 
 # Set LSCOLORS
