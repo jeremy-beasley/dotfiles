@@ -44,6 +44,7 @@ apps=(
   tree
   wget
   wifi-password
+  xmlstarlet
 )
 
 brew install "${apps[@]}"

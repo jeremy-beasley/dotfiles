@@ -19,7 +19,7 @@ alias ....="cd ../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 alias desktop="cd ~/Desktop"
-alias gd="cd ~/Google\ Drive"
+alias gd="cd ~/Google_Drive"
 alias db="cd ~/Dropbox"
 alias dev="cd ~/Dev"
 alias c="clear"
@@ -27,6 +27,9 @@ alias reload="source ~/.bash_profile"
 alias g="git"
 alias rr="rm -rf"
 alias week="date +%V"
+
+# for parsing Youtube subscription xml
+alias xmlrss="xml sel -t -m //outline -v @xmlUrl -n"
 
 #####################################################
 ### DEFAULT ARGUMENTS
