@@ -31,7 +31,7 @@ set tabstop=4
 set shiftwidth=4
 
 " Enable clipboard
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Disable default status line and let lightline take care of the work
 set noshowmode
