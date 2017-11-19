@@ -51,17 +51,18 @@ I've organized the dotfiles into the following major categories:
 
 ### install.sh
 This is the core script that coordiates all the others. The major steps it takes are: 
-	1. Soure common function in `system/*`
-	2. Updates the dotfiles from this repo on Github
-	3. Creates symlinks from this repo to where bash expects it
-	4. Configures vim from `vim/`
-	5. Configures other package managers from `install/`
-	6. Runs tests from `test`
-	7. Install any extra stuff based on local configurations from in `extra/`
+	1. Sources common function in `system/*`.
+	2. Updates the dotfiles from this repo on Github. 
+	3. Creates symlinks from this repo to where bash expects it. 
+	4. Configures vim from `vim/`. 
+	5. Configures other package managers from `install/`. 
+	6. Runs tests from `test`. 
+	7. Installs any extra stuff based on local configurations found in `extra/`. 
 
 ### bin/
 Contains additional functions: 
 	- `dotfiles` is used to update the macos defaults and dock settings.
+	- `tat` attaches or creates a tmux session named the same as the current directory.
 
 ### git/
 Contains git configuration files: `.gitconfig` and `.gitignore_global`
@@ -69,7 +70,7 @@ Contains git configuration files: `.gitconfig` and `.gitignore_global`
 ### install/
 Contains a variety of installation scripts: 
 	- `bash.sh` to install bash
-	- `brew-cash.sh` to install macOS apps, fonts and Quick Look plugins
+	- `brew-cask.sh` to install macOS apps, fonts and Quick Look plugins
 	- `brew.sh` to install a common brew packages
 	- `gem.sh` to install ruby and other gems
 	- `npm.sh` to install node and other node packages

@@ -74,5 +74,3 @@ export DOTFILES_DIR DOTFILES_EXTRA_DIR
 
 # Archey
 archey -c
-
-# Detect whether in tmux; if not, then start new tmux session

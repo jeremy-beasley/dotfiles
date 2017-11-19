@@ -150,20 +150,20 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
-# Finder: show status bar
-# defaults write com.apple.finder ShowStatusBar -bool true
+# Finder: hide status bar
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Finder: show path bar
-# defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowPathbar -bool true
 
 # Finder: allow text selection in Quick Look
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-# Display full POSIX path as Finder window title
-# defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+# Hide full POSIX path as Finder window title
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false
 
-# Keep folders on top when sorting by name
-# defaults write com.apple.finder _FXSortFoldersFirst -bool true
+# Don't keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool false
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -208,8 +208,8 @@ defaults write com.apple.dock launchanim -bool false
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
-# Make Dock icons of hidden applications translucent
-# defaults write com.apple.dock showhidden -bool true
+# Don't Make Dock icons of hidden applications translucent
+defaults write com.apple.dock showhidden -bool false
 
 # No bouncing icons
 defaults write com.apple.dock no-bouncing -bool true

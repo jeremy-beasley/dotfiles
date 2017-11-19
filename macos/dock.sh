@@ -2,7 +2,6 @@
 
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Trello.app"
-dockutil --no-restart --add "/Applications/Habitica.app"
 dockutil --no-restart --add "/Applications/Utilities/iTerm.app"
 dockutil --no-restart --add "/Applications/Calendar.app"
 dockutil --no-restart --add "/Applications/Safari.app"

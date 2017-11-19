@@ -12,7 +12,6 @@ apps=(
   alfred
   dash2
   dropbox
-  google-chrome
   google-drive
   kaleidoscope
   slack
