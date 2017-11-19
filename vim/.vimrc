@@ -70,14 +70,17 @@ noremap <Right> <NOP>
 " Enable highlighting of the current line
 set cursorline
 
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"""""""""""""""
+" INSTALL PLUGINS 
+"""""""""""""""""""
 " Status line
 Plugin 'itchyny/lightline.vim'
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " Commenting
@@ -86,20 +89,20 @@ Plugin 'tpope/vim-commentary'
 " Shortcuts for adding/changing surrounding delimiters
 Plugin 'tpope/vim-surround'
 
-" enable Nerdtree and devicons
+" Enable Nerdtree and devicons
 Plugin 'scrooloose/nerdtree'
 Plugin 'ryanoasis/vim-webdevicons'
 
-" enable auto pairs
+" Enable auto pairs
 Plugin 'jiangmiao/auto-pairs'
 
-" enable syntax checking
+" Enable syntax checking
 Plugin 'vim-syntastic/syntastic'
 
-" enable keyboard shortcut navigation from tmux and vim 
+" Enable keyboard shortcut navigation from tmux and vim 
 Plugin 'christoomey/vim-tmux-navigator'
 
-" enable runner to communicate between vim and tmux
+" Enable runner to communicate between vim and tmux
 Plugin 'christoomey/vim-tmux-runner'
 
 " All of your Plugins must be added before the following line
@@ -108,7 +111,7 @@ filetype plugin indent on    " required
 
 """"""""
 " PLUGIN CONFIGURATIONS 
-" """"""""""
+"""""""""""
 
 " Configure lightline colorscheme
 let g:lightline = {

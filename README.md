@@ -43,8 +43,7 @@ I've organized the dotfiles into the following major categories:
 │   ├── bin.bats
 │   └── function.bats
 └── vim
-    ├── .tmux.conf
-    ├── .vimrc
+    └──.vimrc
 ````
 
 - - - -
