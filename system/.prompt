@@ -86,14 +86,14 @@ set_prompts() {
         # Solarized colors
         # (https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized#the-values)
         black=$(tput setaf 0)
-        blue=$(tput setaf 33)
-        cyan=$(tput setaf 37)
-        green=$(tput setaf 64)
-        orange=$(tput setaf 166)
+        blue=$(tput setaf 4)
+        cyan=$(tput setaf 4)
+        green=$(tput setaf 2)
+        orange=$(tput setaf 1)
         purple=$(tput setaf 125)
-        red=$(tput setaf 124)
+        red=$(tput setaf 1)
         white=$(tput setaf 15)
-        yellow=$(tput setaf 136)
+        yellow=$(tput setaf 3)
     else
         bold=""
         reset="\e[0m"

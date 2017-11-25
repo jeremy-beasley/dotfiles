@@ -68,7 +68,15 @@ noremap <Left> <NOP>
 noremap <Right> <NOP> 
 
 " Enable highlighting of the current line
-set cursorline
+" set cursorline
+
+" Set cursorline colors
+" highlight CursorLine cterm=underline 
+"highlight CursorLine ctermfg=220
+
+" Set color of number column on cursorline
+" highlight CursorLineNR ctermfg=220
+
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -77,11 +85,12 @@ call vundle#begin()
 """""""""""""""
 " INSTALL PLUGINS 
 """""""""""""""""""
-" Status line
-Plugin 'itchyny/lightline.vim'
 
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+" Status line
+Plugin 'itchyny/lightline.vim'
 
 " Commenting
 Plugin 'tpope/vim-commentary'
@@ -105,6 +114,9 @@ Plugin 'christoomey/vim-tmux-navigator'
 " Enable runner to communicate between vim and tmux
 Plugin 'christoomey/vim-tmux-runner'
 
+" Wes Anderson color scheme
+Plugin 'gilgigilgil/anderson.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -113,7 +125,10 @@ filetype plugin indent on    " required
 " PLUGIN CONFIGURATIONS 
 """""""""""
 
-" Configure lightline colorscheme
+" Set colorscheme 
+colo anderson
+
+" Configure lightline colorscheme - Wombat or seoul256
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
