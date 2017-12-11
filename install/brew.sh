@@ -31,6 +31,7 @@ apps=(
   jq
   lynx
   mackup
+  mysql
   nano
   node
   pandoc
