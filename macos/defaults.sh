@@ -14,8 +14,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
 
-# Disable audio feedback when volume is changed
-defaults write com.apple.sound.beep.feedback -bool false
+# Enable audio feedback when volume is changed
+defaults write com.apple.sound.beep.feedback -bool true
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "

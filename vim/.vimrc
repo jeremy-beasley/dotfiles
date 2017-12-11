@@ -72,7 +72,7 @@ noremap <Right> <NOP>
 
 " Set cursorline colors
 " highlight CursorLine cterm=underline 
-"highlight CursorLine ctermfg=220
+" highlight CursorLine ctermfg=220
 
 " Set color of number column on cursorline
 " highlight CursorLineNR ctermfg=220
