@@ -29,7 +29,7 @@ alias rr="rm -rf"
 alias week="date +%V"
 
 # for parsing Youtube subscription xml
-alias xmlrss="xml sel -t -m //outline -v @xmlUrl -n"
+alias xmlrss="xml sel -t -m //outline -v @xmlUrl -n | pbcopy"
 
 #####################################################
 ### DEFAULT ARGUMENTS
