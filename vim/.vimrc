@@ -117,6 +117,9 @@ Plugin 'christoomey/vim-tmux-runner'
 " Wes Anderson color scheme
 Plugin 'gilgigilgil/anderson.vim'
 
+" Emoji support for markdown files
+Plugin 'junegunn/vim-emoji'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -159,3 +162,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Configure vim-emoji only for Markdown files
+augroup emoji_complete
+  autocmd!
+  autocmd FileType markdown setlocal completefunc=emoji#complete
+augroup END
