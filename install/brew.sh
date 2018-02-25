@@ -16,6 +16,7 @@ apps=(
   bats
   battery
   coreutils
+  cmake
   diff-so-fancy
   dockutil
   ffmpeg
@@ -23,6 +24,7 @@ apps=(
   gifsicle
   git
   git-extras
+  go
   gnu-sed --with-default-names
   grep --with-default-names
   hub
@@ -32,6 +34,7 @@ apps=(
   lynx
   mackup
   mysql
+  mono
   nano
   node
   pandoc
@@ -39,6 +42,7 @@ apps=(
   psgrep
   python
   reattach-to-user-namespace
+  rust
   shellcheck
   ssh-copy-id
   tmux

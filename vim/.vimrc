@@ -120,6 +120,9 @@ Plugin 'gilgigilgil/anderson.vim'
 " Emoji support for markdown files
 Plugin 'junegunn/vim-emoji'
 
+" Autocompletion support
+Plugin 'Valloric/YouCompleteMe'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
