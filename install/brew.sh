@@ -12,6 +12,7 @@ brew upgrade
 # Install packages
 
 apps=(
+  archey
   bash-completion2
   bats
   battery
