@@ -50,6 +50,7 @@ I've organized the dotfiles into the following major categories:
 
 ### install.sh
 This is the core script that coordiates all the others. The major steps it takes are: 
+
 	1. Sources common function in `system/*`.
 	2. Updates the dotfiles from this repo on Github. 
 	3. Creates symlinks from this repo to where bash expects it. 
@@ -60,6 +61,7 @@ This is the core script that coordiates all the others. The major steps it takes
 
 ### bin/
 Contains additional functions: 
+
 	- `dotfiles` is used to update the macos defaults and dock settings.
 	- `tat` attaches or creates a tmux session named the same as the current directory.
 
