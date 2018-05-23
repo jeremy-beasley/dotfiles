@@ -1,0 +1,4 @@
+#!/bin/bash 
+# 
+# Parse Youtube subscriptions XML and return RSS urls on new lines
+xml sel -t -m //outline -v @xmlUrl -n "$1" | pbcopy
