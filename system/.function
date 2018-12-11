@@ -8,6 +8,10 @@ ps1() {
   source "$DOTFILES_DIR"/system/.prompt
 }
 
+ps-light() {
+ source "$DOTFILES_DIR"/system/.prompt_light
+}
+
 # Get named var (usage: get "VAR_NAME")
 get() {
   echo "${!1}"

@@ -115,7 +115,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'christoomey/vim-tmux-runner'
 
 " Wes Anderson color scheme
-Plugin 'gilgigilgil/anderson.vim'
+" Plugin 'gilgigilgil/anderson.vim'
+
+" Vim One Half color scheme
+Plugin 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Emoji support for markdown files
 Plugin 'junegunn/vim-emoji'
@@ -132,11 +135,12 @@ filetype plugin indent on    " required
 """""""""""
 
 " Set colorscheme 
-colo anderson
+" colo anderson
+colorscheme onehalfdark
 
-" Configure lightline colorscheme - Wombat or seoul256
+" Configure lightline colorscheme 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'onehalfdark',
       \ }
 
 " Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
