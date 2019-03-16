@@ -115,7 +115,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'christoomey/vim-tmux-runner'
 
 " Wes Anderson color scheme
-" Plugin 'gilgigilgil/anderson.vim'
+Plugin 'gilgigilgil/anderson.vim'
 
 " Vim One Half color scheme
 Plugin 'sonph/onehalf', {'rtp': 'vim/'}
@@ -130,13 +130,16 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+"Install Git fugitive plugin
+Plugin 'tpope/vim-fugitive'
+
 """"""""
 " PLUGIN CONFIGURATIONS 
 """""""""""
 
 " Set colorscheme 
-" colo anderson
-colorscheme onehalfdark
+colorscheme anderson
+" colorscheme onehalfdark
 
 " Configure lightline colorscheme 
 let g:lightline = {

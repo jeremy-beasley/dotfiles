@@ -48,6 +48,7 @@ apps=(
   ssh-copy-id
   tmux
   tree
+  vim
   wget
   wifi-password
   xmlstarlet
