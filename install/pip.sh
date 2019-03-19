@@ -10,6 +10,7 @@ sudo easy_install pip
 packages=(
   requests
   pipenv
+  matplotlib
 )
 
 sudo pip install "${packages[@]}"
