@@ -26,3 +26,7 @@ alias killfinder="killall Finder"
 alias killdock="killall Dock"
 alias killmenubar="killall SystemUIServer NotificationCenter"
 alias killos="killfinder && killdock && killmenubar"
+
+# Change default python on make from python2 to 3 
+# Keeping existing python in place for backwards compatibility — https://stackoverflow.com/a/18425592
+alias python="python3"
