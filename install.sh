@@ -31,12 +31,13 @@ fi
 # Install plugins
 vim +PluginInstall +qall
 
-# Configure other package managers & packages (brew, npm, bash, brek-cask, ruby)
+# Configure other package managers & packages (brew, npm, bash, brek-cask, ruby, python)
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/npm.sh"
 . "$DOTFILES_DIR/install/bash.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
 . "$DOTFILES_DIR/install/gem.sh"
+. "$DOTFILES_DIR/install/pip.sh"
 
 # Run tests
 if is-executable bats; then bats test/*.bats; else echo "Skipped: tests (missing: bats)"; fi

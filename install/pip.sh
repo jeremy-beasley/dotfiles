@@ -11,6 +11,8 @@ packages=(
   requests
   pipenv
   matplotlib
+  nltk
 )
 
 sudo pip install "${packages[@]}"
+sudo pip3 install "${packages[@]}"
