@@ -98,10 +98,6 @@ Plugin 'tpope/vim-commentary'
 " Shortcuts for adding/changing surrounding delimiters
 Plugin 'tpope/vim-surround'
 
-" Enable Nerdtree and devicons
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-webdevicons'
-
 " Enable auto pairs
 Plugin 'jiangmiao/auto-pairs'
 
@@ -125,6 +121,12 @@ Plugin 'junegunn/vim-emoji'
 
 " Autocompletion support
 Plugin 'Valloric/YouCompleteMe'
+
+" Enable Nerdtree and devicons
+Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
+
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
