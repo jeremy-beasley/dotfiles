@@ -122,8 +122,12 @@ Plugin 'junegunn/vim-emoji'
 " Autocompletion support
 Plugin 'Valloric/YouCompleteMe'
 
-" Enable Nerdtree and devicons
+"Install Git fugitive plugin
+Plugin 'tpope/vim-fugitive'
+
+" Enable Nerdtree, icon highlighting and devicons
 Plugin 'scrooloose/nerdtree'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 
 
@@ -132,8 +136,6 @@ Plugin 'ryanoasis/vim-devicons'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"Install Git fugitive plugin
-Plugin 'tpope/vim-fugitive'
 
 """"""""
 " PLUGIN CONFIGURATIONS 
