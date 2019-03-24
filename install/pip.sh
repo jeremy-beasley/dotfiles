@@ -11,6 +11,7 @@ packages=(
   requests
   pipenv
   matplotlib
+  numpy
   nltk
 )
 
