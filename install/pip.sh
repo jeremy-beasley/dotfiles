@@ -12,6 +12,7 @@ packages=(
   pipenv
   matplotlib
   numpy
+  pandas
   nltk
 )
 
