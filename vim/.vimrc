@@ -16,6 +16,7 @@ set laststatus=2
 filetype plugin indent on
 set autoindent
 
+
 " Eliminate delays on ESC in vim
 set ttimeoutlen=10
 
@@ -26,9 +27,10 @@ set number
 set incsearch
 set hlsearch
 
-" Set tabs and indents
+" Set tabs, indents and line lengths
 set tabstop=4
 set shiftwidth=4
+set textwidth=80
 
 " Enable clipboard
 set clipboard=unnamed
