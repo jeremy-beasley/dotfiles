@@ -8,13 +8,14 @@ sudo easy_install pip
 # Globally install with npm
 
 packages=(
-  requests
-  pipenv
+  jupyter
   matplotlib
   numpy
-  pandas
   nltk
+  pandas
+  pipenv
+  requests
 )
 
-sudo pip install "${packages[@]}"
+# sudo pip install "${packages[@]}"
 sudo pip3 install "${packages[@]}"

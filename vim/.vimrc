@@ -157,7 +157,7 @@ let g:lightline = {
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden=1
 set encoding=utf8
-set guifont=InconsolataForPowerline\ Nerd\ Font\ Medium:h13
+set guifont=FuraCode\ Nerd\ Font\ Retina:h12
 
 " Open NerdTree automatically if open vim with directory
 autocmd StdinReadPre * let s:std_in=1
