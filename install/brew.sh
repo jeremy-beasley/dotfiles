@@ -13,6 +13,7 @@ brew upgrade
 
 apps=(
   archey
+  asciinema
   bash-completion2
   bats
   battery
