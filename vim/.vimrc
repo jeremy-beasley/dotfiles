@@ -124,8 +124,11 @@ Plugin 'junegunn/vim-emoji'
 " Autocompletion support
 Plugin 'Valloric/YouCompleteMe'
 
-"Install Git fugitive plugin
+" Install Git fugitive plugin
 Plugin 'tpope/vim-fugitive'
+
+" Install Carbon code snippet plugin
+Plugin 'kristijanhusak/vim-carbon-now-sh'
 
 " Enable Nerdtree, icon highlighting and devicons
 Plugin 'scrooloose/nerdtree'

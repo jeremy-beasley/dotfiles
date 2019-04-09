@@ -29,4 +29,5 @@ alias killos="killfinder && killdock && killmenubar"
 
 # Change default python on make from python2 to 3 
 # Keeping existing python in place for backwards compatibility — https://stackoverflow.com/a/18425592
-alias python="python3"
+# Commenting out for now. python defaults to python3 with Anaconda
+# alias python="python3"

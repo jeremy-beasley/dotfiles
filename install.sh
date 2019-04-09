@@ -19,6 +19,7 @@ ln -sfv "$DOTFILES_DIR/system/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/system/.inputrc" ~
 ln -sfv "$DOTFILES_DIR/system/.gemrc" ~
 ln -sfv "$DOTFILES_DIR/system/.tmux.conf" ~
+ln -sfv "$DOTFILES_DIR/system/.condarc" ~
 ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
