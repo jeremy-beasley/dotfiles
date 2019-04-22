@@ -31,3 +31,6 @@ alias killos="killfinder && killdock && killmenubar"
 # Keeping existing python in place for backwards compatibility — https://stackoverflow.com/a/18425592
 # Commenting out for now. python defaults to python3 with Anaconda
 # alias python="python3"
+#
+# Update default ctags
+alias ctags="`brew --prefix`/bin/ctags"

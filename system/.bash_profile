@@ -102,7 +102,7 @@ if [ $? -eq 0 ]; then
 else
     if [ -f "/Users/jeremy/anaconda3/etc/profile.d/conda.sh" ]; then
         . "/Users/jeremy/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
+        CONDA_CHANGEPS1=true conda activate base
     else
         \export PATH="/Users/jeremy/anaconda3/bin:$PATH"
     fi
