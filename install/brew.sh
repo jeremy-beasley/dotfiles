@@ -19,6 +19,7 @@ apps=(
   battery
   coreutils
   cmake
+  ctags
   diff-so-fancy
   dockutil
   ffmpeg
