@@ -130,6 +130,9 @@ Plugin 'tpope/vim-fugitive'
 " Install Carbon code snippet plugin
 Plugin 'kristijanhusak/vim-carbon-now-sh'
 
+" Install ctags auto-update plugin
+Plugin 'craigemery/vim-autotag'
+
 " Enable Nerdtree, icon highlighting and devicons
 Plugin 'scrooloose/nerdtree'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
