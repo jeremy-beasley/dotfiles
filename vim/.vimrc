@@ -116,8 +116,8 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " Emoji support for markdown files
 Plug 'junegunn/vim-emoji'
 
-" Autocompletion support
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Code completion with 'Conqueror of Code' 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Install Git fugitive plugin
 Plug 'tpope/vim-fugitive'
