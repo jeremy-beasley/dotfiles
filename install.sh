@@ -26,13 +26,14 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/system/.asciinema_config" ~/.config/asciinema/config
 
-# Configure vim with Vundle and initialize plugins
+# Configure vim with vim-plug and initialize plugins
 # Clone Vundle if doesn't exist
 if [ ! -d "~/.vim" ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim 
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 # Install plugins
-vim +PluginInstall +qall
+vim +PlugInstall
 
 # Configure other package managers & packages (brew, npm, bash, brek-cask, ruby, python)
 . "$DOTFILES_DIR/install/brew.sh"
