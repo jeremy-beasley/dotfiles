@@ -80,69 +80,61 @@ noremap <Right> <NOP>
 " highlight CursorLineNR ctermfg=220
 
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
 """""""""""""""
 " INSTALL PLUGINS 
 """""""""""""""""""
 
-" Let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Status line
-Plugin 'itchyny/lightline.vim'
+Plug 'itchyny/lightline.vim'
 
 " Commenting
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 
 " Shortcuts for adding/changing surrounding delimiters
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Enable auto pairs
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " Enable syntax checking
-Plugin 'vim-syntastic/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " Enable keyboard shortcut navigation from tmux and vim 
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 " Enable runner to communicate between vim and tmux
-Plugin 'christoomey/vim-tmux-runner'
+Plug 'christoomey/vim-tmux-runner'
 
 " Wes Anderson color scheme
-Plugin 'gilgigilgil/anderson.vim'
+Plug 'gilgigilgil/anderson.vim'
 
 " Vim One Half color scheme
-Plugin 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Emoji support for markdown files
-Plugin 'junegunn/vim-emoji'
+Plug 'junegunn/vim-emoji'
 
 " Autocompletion support
-Plugin 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 
 " Install Git fugitive plugin
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Install Carbon code snippet plugin
-Plugin 'kristijanhusak/vim-carbon-now-sh'
+Plug 'kristijanhusak/vim-carbon-now-sh'
 
 " Install ctags auto-update plugin
-Plugin 'craigemery/vim-autotag'
+Plug 'craigemery/vim-autotag'
 
 " Enable Nerdtree, icon highlighting and devicons
-Plugin 'scrooloose/nerdtree'
-Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plugin 'ryanoasis/vim-devicons'
-
-
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 
 """"""""
