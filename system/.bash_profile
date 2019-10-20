@@ -17,7 +17,7 @@ READLINK=$(which greadlink || which readlink)
 CURRENT_SCRIPT=$BASH_SOURCE
 
 if [[ -n $CURRENT_SCRIPT && -x "$READLINK" ]]; then
-  SCRIPT_PATH=$($READLINK -f "$CURRENT_SCRIPT")
+  SCRIPT_PATH=$($READLINK "$CURRENT_SCRIPT")
   DOTFILES_DIR=$(dirname "$(dirname "$SCRIPT_PATH")")
 elif [ -d "$HOME/.dotfiles" ]; then
   DOTFILES_DIR="$HOME/.dotfiles"
@@ -88,40 +88,30 @@ export DOTFILES_DIR DOTFILES_EXTRA_DIR
 archey -c
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/jeremy/Dev/google-cloud-sdk/path.bash.inc' ]; then . '/Users/jeremy/Dev/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '$HOME/Dev/google-cloud-sdk/path.bash.inc' ]; then . '$HOME/Dev/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/Users/jeremy/Dev/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/jeremy/Dev/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '$HOME/Dev/google-cloud-sdk/completion.bash.inc' ]; then . '$HOME/Dev/google-cloud-sdk/completion.bash.inc'; fi
 
-# added by Anaconda3 2019.03 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/jeremy/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/jeremy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/jeremy/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=true conda activate base
-    else
-        \export PATH="/Users/jeremy/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
 # <<< conda init <<<
-# added by Anaconda3 2019.03 installer
+# added by Anaconda3 2019.07 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/jeremy/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
 if [ $? -eq 0 ]; then
     \eval "$__conda_setup"
 else
-    if [ -f "/Users/jeremy/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/jeremy/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
         CONDA_CHANGEPS1=false conda activate base
     else
-        \export PATH="/Users/jeremy/anaconda3/bin:$PATH"
+        \export PATH="/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
