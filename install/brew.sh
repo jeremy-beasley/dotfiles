@@ -44,6 +44,7 @@ apps=(
   peco
   psgrep
   python
+  r
   reattach-to-user-namespace
   rust
   shellcheck

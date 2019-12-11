@@ -14,6 +14,7 @@ nvm install 6
 # Globally install with npm
 
 packages=(
+  alfred-figma
   get-port-cli
   historie
   nodemon
