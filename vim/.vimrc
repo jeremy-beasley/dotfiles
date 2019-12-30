@@ -128,6 +128,9 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 " Install ctags auto-update plugin
 Plug 'craigemery/vim-autotag'
 
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 " Enable Nerdtree, icon highlighting and devicons
 Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'

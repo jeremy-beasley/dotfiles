@@ -22,14 +22,16 @@ apps=(
   ctags
   diff-so-fancy
   dockutil
-  ffmpeg
   fasd
+  ffmpeg
+  fzf
   gifsicle
   git
   git-extras
   go
   gnu-sed --with-default-names
   grep --with-default-names
+  hstr
   hub
   httpie
   imagemagick
