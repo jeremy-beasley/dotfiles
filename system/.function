@@ -134,3 +134,14 @@ tat() {
 
 	create_if_needed_and_attach
 }
+
+# Open RStudio from the terminal in current directory
+rs () {
+  if [ -z "$1" ] ; then
+    dir="."
+  else
+    dir="$1"
+  fi
+  cmd="proj <- list.files('$dir', pattern = '*.Rproj$', full.names = TRUE); if (length(proj) > 0) { system(paste('open -na Rstudio', proj[1])) } else { cat('No .Rproj file found in directory.\n') };"
+  Rscript -e "$cmd"
+}
