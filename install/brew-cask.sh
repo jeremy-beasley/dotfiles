@@ -17,6 +17,16 @@ apps=(
   slack
   transmit
   vlc
+
+  # quicklook plugins
+  qlcolorcode 
+  qlstephen 
+  qlmarkdown 
+  quicklook-json 
+  qlimagesize 
+  suspicious-package 
+  quicklookase 
+  qlvideo
 )
 
 brew cask install "${apps[@]}"
