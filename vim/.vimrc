@@ -137,6 +137,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 
+" Vim prettier for formatting 
+Plug 'prettier/vim-prettier'
+
 " All of your Plugins must be added before the following line
 call plug#end()
 
