@@ -25,6 +25,7 @@ apps=(
   fasd
   ffmpeg
   fzf
+  gh
   gifsicle
   git
   git-extras
