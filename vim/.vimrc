@@ -111,6 +111,10 @@ Plug 'christoomey/vim-tmux-runner'
 " Wes Anderson color scheme
 Plug 'gilgigilgil/anderson.vim'
 
+" Seoul color scheme 
+Plug 'junegunn/seoul256.vim'
+
+
 " Vim One Half color scheme
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
@@ -151,11 +155,19 @@ call plug#end()
 " Set colorscheme 
 colorscheme anderson
 " colorscheme onehalfdark
+" let g:seoul256_background = 233
+" let g:seoul256_light_background = 256
+" colorscheme seoul256
+" colorscheme seoul256-light
+" set background=dark 
+" set background=light
+
+
 
 " Configure lightline colorscheme 
-let g:lightline = {
-      \ 'colorscheme': 'onehalfdark',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'onehalfdark',
+"       \ }
 
 " Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
 " devicons
