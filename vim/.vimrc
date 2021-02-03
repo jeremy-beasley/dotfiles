@@ -165,9 +165,9 @@ colorscheme anderson
 
 
 " Configure lightline colorscheme 
-" let g:lightline = {
-"       \ 'colorscheme': 'onehalfdark',
-"       \ }
+ let g:lightline = {
+       \ 'colorscheme': 'onehalfdark',
+       \ }
 
 " Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
 " devicons
