@@ -165,8 +165,8 @@ colorscheme anderson
 
 
 " Configure lightline colorscheme 
- let g:lightline = {
-       \ 'colorscheme': 'onehalfdark',
+let g:lightline = {
+       \ 'colorscheme': 'wombat',
        \ }
 
 " Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
