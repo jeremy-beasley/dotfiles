@@ -25,6 +25,7 @@ ln -sfv "$DOTFILES_DIR/git/.gitconfig" ~
 ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 ln -sfv "$DOTFILES_DIR/vim/.vimrc" ~
 ln -sfv "$DOTFILES_DIR/system/.asciinema_config" ~/.config/asciinema/config
+ln -sfv "$DOTFILES_DIR/system/.zshrc" ~
 
 # Configure vim with vim-plug and initialize plugins
 # Clone Vundle if doesn't exist

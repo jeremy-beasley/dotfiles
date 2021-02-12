@@ -88,7 +88,10 @@ noremap <Right> <NOP>
 call plug#begin('~/.vim/plugged')
 
 " Status line
-Plug 'itchyny/lightline.vim'
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+:
 
 " Commenting
 Plug 'tpope/vim-commentary'
@@ -165,9 +168,9 @@ colorscheme anderson
 
 
 " Configure lightline colorscheme 
-let g:lightline = {
-       \ 'colorscheme': 'wombat',
-       \ }
+" let g:lightline = {
+"        \ 'colorscheme': 'Tomorrow_Night_Blue',
+"        \ }
 
 " Configure nerdtree with ctrl+N kb shortcut, to enable hidden files and
 " devicons
