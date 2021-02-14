@@ -48,6 +48,7 @@ apps=(
   psgrep
   python
   r
+  ranger
   reattach-to-user-namespace
   rust
   shellcheck
