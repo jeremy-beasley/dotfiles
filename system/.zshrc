@@ -147,3 +147,5 @@ if [ -f '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Use
 
 # Enable prompt through Starship
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
