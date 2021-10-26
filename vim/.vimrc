@@ -91,6 +91,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='nord'
 
 
 " Commenting
