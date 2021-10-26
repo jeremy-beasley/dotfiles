@@ -71,14 +71,14 @@ noremap <Left> <NOP>
 noremap <Right> <NOP> 
 
 " Enable highlighting of the current line
-" set cursorline
+set cursorline
 
 " Set cursorline colors
-" highlight CursorLine cterm=underline 
-" highlight CursorLine ctermfg=220
+highlight CursorLine cterm=underline 
+highlight CursorLine ctermfg=220
 
 " Set color of number column on cursorline
-" highlight CursorLineNR ctermfg=220
+highlight CursorLineNR ctermfg=220
 
 
 """""""""""""""
@@ -91,7 +91,7 @@ call plug#begin('~/.vim/plugged')
 " Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-:
+
 
 " Commenting
 Plug 'tpope/vim-commentary'
@@ -112,14 +112,16 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'christoomey/vim-tmux-runner'
 
 " Wes Anderson color scheme
-Plug 'gilgigilgil/anderson.vim'
+" Plug 'gilgigilgil/anderson.vim'
 
 " Seoul color scheme 
-Plug 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 
+" Nord color scheme
+Plug 'arcticicestudio/nord-vim'
 
 " Vim One Half color scheme
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
+" Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Emoji support for markdown files
 Plug 'junegunn/vim-emoji'
@@ -154,9 +156,11 @@ call plug#end()
 """"""""
 " PLUGIN CONFIGURATIONS 
 """""""""""
+" Use Nord in vim which is different from the terminal theme 
+set termguicolors
 
 " Set colorscheme 
-colorscheme anderson
+colorscheme nord
 " colorscheme onehalfdark
 " let g:seoul256_background = 233
 " let g:seoul256_light_background = 256
