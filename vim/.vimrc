@@ -138,6 +138,9 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 " Install ctags auto-update plugin
 Plug 'craigemery/vim-autotag'
 
+" Install auto close tags
+Plug 'alvan/vim-closetag'
+
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
