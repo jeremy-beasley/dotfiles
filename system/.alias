@@ -84,9 +84,11 @@ alias bug="brew upgrade"
 
 # git 
 alias ga="git add"
-alias gs="git status"
+alias gs="git status --short"
 alias gc="git commit"
 alias gb="git checkout -b"
+alias gd="git diff"
+alias gl="git log --graph --abbrev-commit --date-order --format=format:'%Cblue%h%Creset%C(bold red)%d%Creset %s &lt;%an&gt; %Cgreen(%ar)%Creset' --all"
 
 
 # Misc
