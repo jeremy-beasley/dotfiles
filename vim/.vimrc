@@ -97,6 +97,9 @@ let g:airline_theme='nord'
 " Commenting
 Plug 'tpope/vim-commentary'
 
+" Dash integration 
+Plug 'rizzatti/dash.vim'
+
 " Shortcuts for adding/changing surrounding delimiters
 Plug 'tpope/vim-surround'
 
