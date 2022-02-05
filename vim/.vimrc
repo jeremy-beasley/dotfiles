@@ -147,6 +147,8 @@ Plug 'alvan/vim-closetag'
 
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 
 " Enable Nerdtree, icon highlighting and devicons
 Plug 'scrooloose/nerdtree'
