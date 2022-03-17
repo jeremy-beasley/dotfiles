@@ -93,6 +93,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='nord'
 
+" Disraction free writing 
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Commenting
 Plug 'tpope/vim-commentary'
