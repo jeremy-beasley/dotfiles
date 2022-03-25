@@ -15,6 +15,7 @@ nvm install 6
 
 packages=(
   alfred-figma
+  browser-sync
   get-port-cli
   historie
   nodemon

@@ -93,9 +93,15 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='nord'
 
+" Disraction free writing 
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " Commenting
 Plug 'tpope/vim-commentary'
+
+" Dash integration 
+Plug 'rizzatti/dash.vim'
 
 " Shortcuts for adding/changing surrounding delimiters
 Plug 'tpope/vim-surround'
@@ -139,8 +145,13 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 " Install ctags auto-update plugin
 Plug 'craigemery/vim-autotag'
 
+" Install auto close tags
+Plug 'alvan/vim-closetag'
+
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 
 " Enable Nerdtree, icon highlighting and devicons
 Plug 'scrooloose/nerdtree'
@@ -194,6 +205,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Close vim if NerdTree is the last window open 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Configure fzf.vim 
+nnoremap <C-p> :Files<Cr>
+
 
 " Configure Syntastic
 set statusline+=%#warningmsg#
