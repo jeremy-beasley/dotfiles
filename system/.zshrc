@@ -145,10 +145,11 @@ if [ -f '/Users/beasley/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/bea
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Enable prompt through Starship
-eval "$(starship init zsh)"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Set auto cd 
 set opt AUTO_CD
+
+# Enable prompt through Starship
+eval "$(starship init zsh)"
+
