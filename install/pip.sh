@@ -15,6 +15,7 @@ packages=(
   pandas
   pipenv
   requests
+  visidata
 )
 
 # sudo pip install "${packages[@]}"
