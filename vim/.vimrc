@@ -87,7 +87,10 @@ highlight CursorLineNR ctermfg=220
 
 call plug#begin('~/.vim/plugged')
 
-" Status line
+" Plugin for todos
+Plug 'folke/todo-comments.nvim'
+
+"Status line
 " Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
