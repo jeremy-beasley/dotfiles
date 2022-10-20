@@ -97,7 +97,11 @@ Contains vim configuration file, `.vimrc`
 
 - - - - 
 
+
+
 # Installation
+
+Requires `brew` and `node`
 
 On a sparkling fresh installation of macOS:
 
