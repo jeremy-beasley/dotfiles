@@ -1,13 +1,61 @@
-#!/bin/bash
+# Colors 
+autoload -U colors 
 
-# bash_profile
 
-# set 256 color profile where possible
-if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
-    export TERM=gnome-256color
-elif infocmp xterm-256color >/dev/null 2>&1; then
-    export TERM=xterm-256color
-fi
+# History in cache directory:
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.cache/zsh/history
+
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -v '^?' backward-delete-char
+
+# Change cursor shape for different vi modes.
+# https://unix.stackexchange.com/questions/433273/changing-cursor-style-based-on-mode-in-both-zsh-and-vim
+# Set cursor style (DECSCUSR), VT520.
+# 0  ⇒  blinking block.
+# 1  ⇒  blinking block (default).
+# 2  ⇒  steady block.
+# 3  ⇒  blinking underline.
+# 4  ⇒  steady underline.
+# 5  ⇒  blinking bar, xterm.
+# 6  ⇒  steady bar, xterm.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    echo -ne '\e[2 q'
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'block' ]]; then
+    echo -ne '\e[5 q'
+  fi
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+##### — Added from bash_profile
 
 # Resolve DOTFILES_DIR (assuming ~/.dotfiles on distros without readlink and/or $BASH_SOURCE/$0)
 READLINK=$(which greadlink || which readlink)
@@ -28,7 +76,7 @@ DOTFILES_CACHE="$DOTFILES_DIR/.cache.sh"
 [ -f "$DOTFILES_CACHE" ] && . "$DOTFILES_CACHE"
 
 # Finally we can source the dotfiles (order matters)
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,nvm,rvm,custom}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,grep,nvm,rvm,custom}; do
   [ -f "$DOTFILE" ] && . "$DOTFILE"
 done
 
@@ -36,20 +84,6 @@ if is-macos; then
   for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}.macos; do
     [ -f "$DOTFILE" ] && . "$DOTFILE"
   done
-fi
-
-# Enable bash completions 
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-
-if type brew &>/dev/null; then
-  for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
-  do
-    [[ -f $COMPLETION ]] && source "$COMPLETION"
-  done
-  if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
-  then
-    source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
-  fi
 fi
 
 # Detect whether in tmux; if not, then start new tmux session
@@ -108,32 +142,33 @@ unset __conda_setup
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
 export PATH
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/beasley/Dev/google-cloud-sdk/path.bash.inc' ]; then . '/Users/beasley/Dev/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/beasley/Dev/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/beasley/Dev/google-cloud-sdk/completion.bash.inc'; fi
 # added by Anaconda3 2019.10 installer
 # >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/beasley/opt/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/beasley/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-# . "/Users/beasley/opt/anaconda3/etc/profile.d/conda.sh"  # commented out by conda initialize
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/Users/beasley/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
+
+# Enable syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/beasley/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/beasley/Dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc'; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set auto cd 
+set opt AUTO_CD
+
+# Enable prompt through Starship
+eval "$(starship init zsh)"
+
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
@@ -146,16 +181,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-# Enable starship for prompt management
-eval "$(starship init bash)"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Setting PATH for Python 3.10
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.10/bin:${PATH}"
-export PATH

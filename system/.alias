@@ -28,6 +28,9 @@ alias g="git"
 alias rr="rm -rf"
 alias week="date +%V"
 
+# for time with Aria
+alias moon="curl wttr.in/Moon"
+
 #####################################################
 ### DEFAULT ARGUMENTS
 #####################################################
