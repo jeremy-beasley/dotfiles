@@ -11,6 +11,7 @@ vicmd_symbol = "[V] "
 [conda]
 format = "[$symbol$environment](dimmed green) "
 
+# gcloud env
 [gcloud]
 format = "[$symbol $active]($style) "
 style = "bold yellow"
