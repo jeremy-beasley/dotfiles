@@ -146,8 +146,9 @@ export PATH
 # added by Anaconda3 2019.10 installer
 # >>> conda init >>>
 
+# Removing syntax highlighting since installed via homebrew
 # Enable syntax highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
