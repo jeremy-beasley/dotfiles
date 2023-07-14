@@ -117,8 +117,9 @@ unset READLINK CURRENT_SCRIPT SCRIPT_PATH DOTFILE EXTRAFILE
 # Export
 export DOTFILES_DIR DOTFILES_EXTRA_DIR
 
+# Fix: removing Archey for the moment; not supported and don't have a good alternative
 # Archey
-archey -c
+# archey -c
 
 # TODO: Delete - you already have a version of this below
 # # <<< conda init <<<
