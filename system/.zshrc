@@ -156,9 +156,6 @@ export PATH
 # Set auto cd 
 set opt AUTO_CD
 
-# Enable prompt through Starship
-# eval "$(starship init zsh)"
-
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -184,3 +181,7 @@ source <(ng completion script)
 
 # Load zsh highlighting 
 # source #{HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Enable prompt through Starship
+eval "$(starship init zsh)"
+
