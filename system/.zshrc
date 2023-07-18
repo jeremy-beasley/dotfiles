@@ -181,3 +181,6 @@ unset __conda_setup
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+# Load zsh highlighting 
+# source #{HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

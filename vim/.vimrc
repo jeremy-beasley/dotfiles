@@ -96,7 +96,14 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='nord'
 
-" Disraction free writing 
+" Nord color scheme
+Plug 'arcticicestudio/nord-vim'
+
+" Alt Nord color scheme that has dark / light support  - KIND of works but not
+" completely
+" Plug 'casonadams/nord.vim'
+
+"Disraction free writing 
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
@@ -127,8 +134,6 @@ Plug 'christoomey/vim-tmux-runner'
 " Seoul color scheme 
 " Plug 'junegunn/seoul256.vim'
 
-" Nord color scheme
-Plug 'arcticicestudio/nord-vim'
 
 " Vim One Half color scheme
 " Plug 'sonph/onehalf', {'rtp': 'vim/'}
