@@ -149,7 +149,7 @@ unset __conda_setup
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Enable starship for prompt management
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 # Set PATH, MANPATH, etc., for Homebrew.

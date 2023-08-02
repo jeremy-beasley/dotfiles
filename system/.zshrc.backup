@@ -160,7 +160,7 @@ if [ -f '/Users/beasley/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Use
 set opt AUTO_CD
 
 # Enable prompt through Starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.

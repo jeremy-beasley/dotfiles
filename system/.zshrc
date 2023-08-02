@@ -183,5 +183,5 @@ source <(ng completion script)
 # source #{HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Enable prompt through Starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
