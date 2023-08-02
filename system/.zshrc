@@ -183,5 +183,7 @@ source <(ng completion script)
 # source #{HOMEBREW_PREFIX}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Enable prompt through Starship
-# eval "$(starship init zsh)"
-
+# Update prompt because of slowness. See issue here - https://github.com/spaceship-prompt/spaceship-prompt/discussions/984
+SPACESHIP_GIT_STATUS_SHOW=false
+SPACESHIP_NODE_SHOW=false
+eval "$(starship init zsh)"
