@@ -3,6 +3,9 @@
 set nocompatible
 filetype off
 
+" Map the leader key to a comma.
+ let mapleader = ','
+
 " Make backspace behave in a sane manner
 set backspace=indent,eol,start
 
@@ -215,8 +218,10 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Configure fzf.vim 
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-f> :Files<Cr>
 
+" Configure rgrep 
+nnoremap <silent> <C-f> :Files<CR>
 
 " Configure Syntastic
 set statusline+=%#warningmsg#
