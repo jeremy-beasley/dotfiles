@@ -153,6 +153,12 @@ export PATH
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Fzf does not use ripgrep by default, so we need to tell fzf to use ripgrep by defining a FZF_DEFAULT_COMMAND variable. In my .zshrc (.bashrc if you use bash), I have these - https://github.com/iggredible/Learn-Vim/blob/master/ch03_searching_files.md#setup
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files'
+  export FZF_DEFAULT_OPTS='-m'
+fi
+
 # Set auto cd 
 set opt AUTO_CD
 

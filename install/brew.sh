@@ -54,6 +54,7 @@ apps=(
   shellcheck
   ssh-copy-id
   tmux
+  tpm
   tree
   vim
   wget
